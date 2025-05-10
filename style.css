@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Gurajada&family=Holtwood+One+SC&family=Joan&family=Konkhmer+Sleokchher&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Gunakan selector yang benar: body (bukan .body) */
+body {
+  display: flex; /* Hati-hati! Ini bisa menyebabkan tata letak rusak jika tidak diatur */
+  font-family: 'Poppins', sans-serif; /* Typo di "font-familly" */
+  color: #F3F3E0; /* Tambahkan # untuk warna HEX */
+}
+.navbar {
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  color: #333;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #198754; /* Bootstrap success green */
+}
+
+.navbar.fixed-top + * {
+  margin-top: 70px; /* Menghindari tumpukan konten dengan navbar */
+}
+
+/* Untuk teks dalam carousel */
+.text_caraousel {
+  color: rgb(0, 0, 0);
+  margin: 40px;
+}
+
+/* Untuk gambar dalam carousel */
+.caraousel-wrap img {
+  border-radius: 10px;
+}
+.scroll-fade {
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: all 0.8s ease-out;
+  will-change: transform, opacity;
+}
+
+.scroll-fade.left {
+  transform: translateX(-60px);
+}
+
+.scroll-fade.right {
+  transform: translateX(60px);
+}
+
+.scroll-fade.top {
+  transform: translateY(-60px);
+}
+
+.scroll-fade.bottom {
+  transform: translateY(60px);
+}
+
+.scroll-fade.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.scroll-fade {
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: all 0.8s ease;
+}
